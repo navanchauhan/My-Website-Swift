@@ -1,4 +1,4 @@
-language: python
+language: swift
 osx_image: xcode11.3
 
 before_install:

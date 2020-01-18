@@ -8,6 +8,10 @@ matrix:
 before_install:
   - git clone https://github.com/IBM-Swift/Package-Builder.git
   - pip install pygments
+  - wget https://github.com/JohnSundell/Publish/archive/0.4.0.tar.gz
+  - tar -xzvf 0.4.0.tar.gz
+  - cd Publish-0.4.0
+  - make install
 
 script:
   - ./Package-Builder/build-package.sh -projectDir $TRAVIS_BUILD_DIR

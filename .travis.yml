@@ -1,22 +1,16 @@
-language: swift
-os: osx
-osx_image: xcode11.3
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
+    - os: osx
+      osx_image: xcode9
+      sudo: required
 
-xcode_project: Package.swift # path to your xcodeproj folder
-xcode_scheme: MyWebsite
-xcode_destination: platform=My Mac
+before_install:
+  - git clone https://github.com/IBM-Swift/Package-Builder.git
+  - brew install python
+  - pip install pygments
 
-
-
-
-- language: swift
-- script:
-    - wget https://github.com/JohnSundell/Publish/archive/0.4.0.tar.gz
-    - tar -xzvf 0.4.0.tar.gz
-    - cd Publish-0.4.0
-    - make install
-    - cd ..
-    - brew install python
-    - pip install pygments
-
-after_succesfull: publish build
+script:
+  - ./Package-Builder/build-package.sh -projectDir $TRAVIS_BUILD_DIR

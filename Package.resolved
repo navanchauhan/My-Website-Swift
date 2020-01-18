@@ -1,0 +1,124 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Codextended",
+        "repositoryURL": "https://github.com/johnsundell/codextended.git",
+        "state": {
+          "branch": null,
+          "revision": "8d7c46dfc9c55240870cf5561d6cefa41e3d7105",
+          "version": "0.3.0"
+        }
+      },
+      {
+        "package": "CommandLineKit",
+        "repositoryURL": "https://github.com/pvieito/CommandLineKit.git",
+        "state": {
+          "branch": "master",
+          "revision": "e804cef1719bf410373a06d14d4b9d0b0c456753",
+          "version": null
+        }
+      },
+      {
+        "package": "Files",
+        "repositoryURL": "https://github.com/johnsundell/files.git",
+        "state": {
+          "branch": null,
+          "revision": "22fe84797d499ffca911ccd896b34efaf06a50b9",
+          "version": "4.1.1"
+        }
+      },
+      {
+        "package": "Ink",
+        "repositoryURL": "https://github.com/johnsundell/ink.git",
+        "state": {
+          "branch": null,
+          "revision": "c88bbce588a1ebfde2cf4d61eb9865a3edaa27d4",
+          "version": "0.2.0"
+        }
+      },
+      {
+        "package": "LoggerKit",
+        "repositoryURL": "https://github.com/pvieito/LoggerKit.git",
+        "state": {
+          "branch": "master",
+          "revision": "6029a7265e08b1ecb92d968b1502de96e26d95e8",
+          "version": null
+        }
+      },
+      {
+        "package": "Plot",
+        "repositoryURL": "https://github.com/johnsundell/plot.git",
+        "state": {
+          "branch": null,
+          "revision": "ccabb2674ca0d9ccfabd5e7c0c44c6cca6c827fb",
+          "version": "0.5.0"
+        }
+      },
+      {
+        "package": "Publish",
+        "repositoryURL": "https://github.com/johnsundell/publish.git",
+        "state": {
+          "branch": null,
+          "revision": "c1bde99ec71f992cbe7dec6310759b14258567a8",
+          "version": "0.3.0"
+        }
+      },
+      {
+        "package": "PythonKit",
+        "repositoryURL": "https://github.com/pvieito/PythonKit.git",
+        "state": {
+          "branch": "master",
+          "revision": "d54ba4bb75bc90c5562cefa5d5729283d1728e29",
+          "version": null
+        }
+      },
+      {
+        "package": "ReadTimePublishPlugin",
+        "repositoryURL": "https://github.com/artrmz/ReadTimePublishPlugin",
+        "state": {
+          "branch": null,
+          "revision": "eae5c04b45c5ecd6df70a3e5e92c600deeac77f5",
+          "version": "0.1.0"
+        }
+      },
+      {
+        "package": "ShellOut",
+        "repositoryURL": "https://github.com/johnsundell/shellout.git",
+        "state": {
+          "branch": null,
+          "revision": "e1577acf2b6e90086d01a6d5e2b8efdaae033568",
+          "version": "2.3.0"
+        }
+      },
+      {
+        "package": "Sweep",
+        "repositoryURL": "https://github.com/johnsundell/sweep.git",
+        "state": {
+          "branch": null,
+          "revision": "d357d12c9558e51f037bf2f956d5cf6c73dc0d44",
+          "version": "0.3.0"
+        }
+      },
+      {
+        "package": "SwiftPygments",
+        "repositoryURL": "https://github.com/Ze0nC/SwiftPygments",
+        "state": {
+          "branch": "master",
+          "revision": "c22bcfcc5931db56c971c1d2722de856a8bfaf39",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftPygmentsPublishPlugin",
+        "repositoryURL": "https://github.com/Ze0nC/SwiftPygmentsPublishPlugin",
+        "state": {
+          "branch": "master",
+          "revision": "217207dd34fa31cb2e45455f8788d80c1b07bd05",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

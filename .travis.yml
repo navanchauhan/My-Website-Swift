@@ -9,7 +9,6 @@ matrix:
     - language: python
       script:
         - pip install pygments
-
     - language: swift
     - script:
         - wget https://github.com/JohnSundell/Publish/archive/0.4.0.tar.gz
@@ -17,4 +16,4 @@ matrix:
         - cd Publish-0.4.0
         - make install
         - cd ..
-    - install: publish generate
+        - install: publish generate

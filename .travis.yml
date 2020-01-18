@@ -12,6 +12,8 @@ before_install:
   - tar -xzvf 0.4.0.tar.gz
   - cd Publish-0.4.0
   - make install
+  - cd ..
 
 script:
   - ./Package-Builder/build-package.sh -projectDir $TRAVIS_BUILD_DIR
+  - publish generate

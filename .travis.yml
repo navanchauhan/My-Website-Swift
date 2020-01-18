@@ -1,0 +1,10 @@
+language: swift
+osx_image: xcode11.3
+
+before_install:
+  - wget https://github.com/JohnSundell/Publish/archive/0.4.0.tar.gz
+  - tar -xzvf Publish-0.4.0.tar.tar.gz
+  - cd Publish-0.4.0.tar
+  - make install
+  - cd ..
+  - publish generate

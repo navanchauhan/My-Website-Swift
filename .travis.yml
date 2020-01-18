@@ -6,7 +6,6 @@ matrix:
 
 before_install:
   - git clone https://github.com/IBM-Swift/Package-Builder.git
-  - brew install python
   - pip install pygments
 
 script:

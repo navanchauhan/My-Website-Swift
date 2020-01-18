@@ -4,8 +4,7 @@ osx_image: xcode11.3
 before_install:
   - wget https://github.com/JohnSundell/Publish/archive/0.4.0.tar.gz
   - tar -xzvf 0.4.0.tar.gz
-  - ls
-  - cd 0.4.0/
+  - cd Publish-0.4.0
   - make install
   - cd ..
 install: publish generate

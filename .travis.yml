@@ -8,18 +8,15 @@ xcode_destination: platform=My Mac
 
 
 
-matrix:
-  include:
-    - language: generic
-      script:
-        - pip install pygments
-    - language: swift
-    - script:
-        - wget https://github.com/JohnSundell/Publish/archive/0.4.0.tar.gz
-        - tar -xzvf 0.4.0.tar.gz
-        - cd Publish-0.4.0
-        - make install
-        - cd ..
-        - publish generate
 
-after_succesfull: swift build
+- language: swift
+- script:
+    - wget https://github.com/JohnSundell/Publish/archive/0.4.0.tar.gz
+    - tar -xzvf 0.4.0.tar.gz
+    - cd Publish-0.4.0
+    - make install
+    - cd ..
+    - brew install python
+    - pip install pygments
+
+after_succesfull: publish build

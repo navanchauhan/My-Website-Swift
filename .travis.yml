@@ -7,7 +7,7 @@ matrix:
 
 before_install:
   - git clone https://github.com/IBM-Swift/Package-Builder.git
-  - pip install pygments
+  - python3 -m pip install pygments
   - wget https://github.com/JohnSundell/Publish/archive/0.4.0.tar.gz
   - tar -xzvf 0.4.0.tar.gz
   - cd Publish-0.4.0

@@ -6,7 +6,7 @@ tags: Personal
 
 # About Me
 
-Hi! My name is Navan Chauhan. [Résumé]("./assets/résumé.pdf")
+Hi! My name is Navan Chauhan. 
 
 
 ![](/images/me.jpeg)

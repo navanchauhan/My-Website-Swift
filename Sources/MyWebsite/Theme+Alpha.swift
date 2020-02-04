@@ -109,7 +109,10 @@ private struct AlphaHTMLFactory<Site: Website>: HTMLFactory {
                             .contentBody(item.body)
                         ),
                         .span("Tagged with: "),
-                        .tagList(for: item, on: context.site)
+                        .tagList(for: item, on: context.site),
+                        .div(.id("disqus_thread")),
+                        .script(.src("/assets/disqus.js")),
+                        .element(named: "noscript", text: "Please enable JavaScript to view the comments")
                     )
                 ),
                 .footer(for: context.site)
@@ -239,7 +242,7 @@ private extension Node where Context == HTML.BodyContext {
                             ))
                             },
                             .li(.a(
-                                .href("https://navanchauhan.github.io/assets/résumé.pdf"),
+                                .href("/assets/résumé.pdf"),
                                 .text("Résumé")
                                 )),
                             .li(.a(

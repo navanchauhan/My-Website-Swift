@@ -1,7 +1,7 @@
 ---
 date: 2020-01-16 10:36
 description: Tutorial on creating a custom Image Classifier using Turicreate and a dataset from Kaggle
-tags: tutorial, colab, turicreate
+tags: Tutorial, Colab, Turicreate
 ---
 
 # Creating a Custom Image Classifier using Turicreate to detect Smoke and Fire

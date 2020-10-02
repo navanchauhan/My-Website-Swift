@@ -1,7 +1,7 @@
 ---
 date: 2019-12-16 14:16
 description: Polynomial regression using TensorFlow
-tags: tutorial, tensorflow, colab
+tags: Tutorial, Tensorflow, Colab
 ---
 
 # Polynomial Regression Using TensorFlow
@@ -43,9 +43,9 @@ import pandas as pd
 
 ### Creating Random Data
 
-Even though in this tutorial we will use a Position Vs Salary datasset, it is important to know how to create synthetic data
+Even though in this tutorial we will use a Position Vs Salary dataset, it is important to know how to create synthetic data
 
-To create 50 values spaced evenly between 0 and 50, we use NumPy's linspace funtion
+To create 50 values spaced evenly between 0 and 50, we use NumPy's linspace function
 
 `linspace(lower_limit, upper_limit, no_of_observations)`
 
@@ -90,7 +90,7 @@ df # this gives us a preview of the dataset we are working with
 | CEO               | 10    | 1000000 |
 ```
 
-We convert the salary column as the ordinate (y-cordinate) and level column as the abscissa
+We convert the salary column as the ordinate (y-coordinate) and level column as the abscissa
 
 ```python
 abscissa = df["Level"].to_list() # abscissa = [1,2,3,4,5,6,7,8,9,10]
@@ -116,7 +116,7 @@ Y = tf.placeholder("float")
 ```
 
 ### Defining Variables
-We first define all the coefficients and constant as tensorflow variables haveing a random intitial value
+We first define all the coefficients and constant as tensorflow variables having a random initial value
 
 ```python
 a = tf.Variable(np.random.randn(), name = "a")
@@ -499,7 +499,7 @@ You just learnt Polynomial Regression using TensorFlow!
 ### Overfitting
 
 > > Overfitting refers to a model that models the training data too well.
-Overfitting happens when a model learns the detail and noise in the training data to the extent that it negatively impacts the performance of the model on new data. This means that the noise or random fluctuations in the training data is picked up and learned as concepts by the model. The problem is that these concepts do not apply to new data and negatively impact the models ability to generalize.
+Overfitting happens when a model learns the detail and noise in the training data to the extent that it negatively impacts the performance of the model on new data. This means that the noise or random fluctuations in the training data is picked up and learned as concepts by the model. The problem is that these concepts do not apply to new data and negatively impact the models ability to generalise.
 
 > Source: Machine Learning Mastery
 

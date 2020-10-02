@@ -22,7 +22,7 @@ struct MyWebsite: Website {
 
     var url = URL(string: "https://navanchauhan.github.io/")!
     var name = "Navan Chauhan"
-    var description = "Welcome to my personal fragment of the internet."
+    var description = "Welcome to my personal fragment of the internet. Majority of the posts should be complete."
     var language: Language { .english }
     var imagePath: Path? { "images/logo.png" }
 }

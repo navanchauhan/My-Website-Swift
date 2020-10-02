@@ -9,6 +9,8 @@ tags: publication
 
 > Based on the project showcased at Toyota Hackathon, IITD - 17/18th December 2018
 
+Edit: It seems like I haven't mentioned Adrian Rosebrock of PyImageSearch anywhere. I apologize for this mistake.
+
 [Download paper here](https://www.irjet.net/archives/V6/i5/IRJET-V6I5318.pdf)
 
 Recommended citation:

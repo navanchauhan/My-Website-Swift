@@ -2,7 +2,7 @@
 date: 2019-12-08 13:27
 description: Short code snippet for splitting zips.
 readTime: 120
-tags: code-snippet, tutorial
+tags: Code-Snippet, Tutorial
 ---
 
 # Splitting ZIPs into Multiple Parts

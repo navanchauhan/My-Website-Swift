@@ -5,6 +5,7 @@
 //  Created by Navan Chauhan on 04/01/20.
 //
 
+import Foundation
 import Publish
 import Plot
 import ReadTimePublishPlugin
@@ -25,14 +26,9 @@ private struct AlphaHTMLFactory<Site: Website>: HTMLFactory {
         HTML(
             .lang(context.site.language),
             .head(for: index, on: context.site),
-            .head(
-                .script( .src("https://www.googletagmanager.com/gtag/js?id=UA-108635191-1v")
-                ),
-                .script("window.dataLayer = window.dataLayer || [];",
-                  "function gtag(){dataLayer.push(arguments);}",
-                  "gtag('js', new Date());",
-                  "gtag('config', 'UA-108635191-1');"
-            )),
+            .head(.link(.attribute(named: "rel", value: "manifest"), .href("manifest.json"))),
+            .head(.meta(.attribute(named: "name", value: "google-site-verification"),.attribute(named: "content", value: "LVeSZxz-QskhbEjHxOi7-BM5dDxTg53x2TwrjFxfL0k"))),
+            .head(.script("var _paq=window._paq=window._paq||[];_paq.push(['trackPageView']),_paq.push(['enableLinkTracking']),function(){var a='https://navanspi.duckdns.org:6969/analytics/';_paq.push(['setTrackerUrl',a+'matomo.php']),_paq.push(['setSiteId','2']);var e=document,t=e.createElement('script'),p=e.getElementsByTagName('script')[0];t.type='text/javascript',t.async=!0,t.src=a+'matomo.js',p.parentNode.insertBefore(t,p)}();")),
             .body(
                 
                 .header(for: context, selectedSection: nil),
@@ -53,6 +49,16 @@ private struct AlphaHTMLFactory<Site: Website>: HTMLFactory {
                         on: context.site
                     )
                 ),
+                .script(.src("assets/manup.min.js")),
+                .script(.src("/pwabuilder-sw-register.js")),
+                
+                .script( .src("https://www.googletagmanager.com/gtag/js?id=UA-108635191-1v")
+                               ),
+                               .script("window.dataLayer = window.dataLayer || [];",
+                                 "function gtag(){dataLayer.push(arguments);}",
+                                 "gtag('js', new Date());",
+                                 "gtag('config', 'UA-108635191-1');"
+                           ),
                 .footer(for: context.site)
             )
         )
@@ -63,6 +69,7 @@ private struct AlphaHTMLFactory<Site: Website>: HTMLFactory {
         HTML(
             .lang(context.site.language),
             .head(for: section, on: context.site),
+            .head(.script("var _paq=window._paq=window._paq||[];_paq.push(['trackPageView']),_paq.push(['enableLinkTracking']),function(){var a='https://navanspi.duckdns.org:6969/analytics/';_paq.push(['setTrackerUrl',a+'matomo.php']),_paq.push(['setSiteId','2']);var e=document,t=e.createElement('script'),p=e.getElementsByTagName('script')[0];t.type='text/javascript',t.async=!0,t.src=a+'matomo.js',p.parentNode.insertBefore(t,p)}();")),
             .head(
                 .script( .src("https://www.googletagmanager.com/gtag/js?id=UA-108635191-1v")
                 ),
@@ -89,6 +96,7 @@ private struct AlphaHTMLFactory<Site: Website>: HTMLFactory {
         HTML(
             .lang(context.site.language),
             .head(for: item, on: context.site),
+            .head(.script("var _paq=window._paq=window._paq||[];_paq.push(['trackPageView']),_paq.push(['enableLinkTracking']),function(){var a='https://navanspi.duckdns.org:6969/analytics/';_paq.push(['setTrackerUrl',a+'matomo.php']),_paq.push(['setSiteId','2']);var e=document,t=e.createElement('script'),p=e.getElementsByTagName('script')[0];t.type='text/javascript',t.async=!0,t.src=a+'matomo.js',p.parentNode.insertBefore(t,p)}();")),
             .head(
                 .script( .src("https://www.googletagmanager.com/gtag/js?id=UA-108635191-1v")
                 ),
@@ -105,14 +113,17 @@ private struct AlphaHTMLFactory<Site: Website>: HTMLFactory {
                         
                         .div(
                             .class("content"),
-                            .unwrap(item.readTime().time, { .span( .class("reading-time"), "🕑 \($0) minute read.") }),
+                            .unwrap(item.readTime().time, { .span( .class("reading-time"), "\($0) minute read") }), .span(.class("reading-time"), "Created on \(getFormattedDate(date: item.date))"),
+                            .if(getFormattedDate(date: item.date) != getFormattedDate(date: item.lastModified),
+                                                 .span(.class("reading-time"), "Last modified on ", "\(getFormattedDate(date: item.lastModified))")
+                                               ),
                             .contentBody(item.body)
                         ),
                         .span("Tagged with: "),
-                        .tagList(for: item, on: context.site),
-                        .div(.id("disqus_thread")),
+                        .tagList(for: item, on: context.site)
+                        /**.div(.id("disqus_thread")),
                         .script(.src("/assets/disqus.js")),
-                        .element(named: "noscript", text: "Please enable JavaScript to view the comments")
+                        .element(named: "noscript", text: "Please enable JavaScript to view the comments")**/
                     )
                 ),
                 .footer(for: context.site)
@@ -125,6 +136,7 @@ private struct AlphaHTMLFactory<Site: Website>: HTMLFactory {
         HTML(
             .lang(context.site.language),
             .head(for: page, on: context.site),
+            .head(.script("var _paq=window._paq=window._paq||[];_paq.push(['trackPageView']),_paq.push(['enableLinkTracking']),function(){var a='https://navanspi.duckdns.org:6969/analytics/';_paq.push(['setTrackerUrl',a+'matomo.php']),_paq.push(['setSiteId','2']);var e=document,t=e.createElement('script'),p=e.getElementsByTagName('script')[0];t.type='text/javascript',t.async=!0,t.src=a+'matomo.js',p.parentNode.insertBefore(t,p)}();")),
             .head(
                 .script( .src("https://www.googletagmanager.com/gtag/js?id=UA-108635191-1v")
                 ),
@@ -148,6 +160,7 @@ private struct AlphaHTMLFactory<Site: Website>: HTMLFactory {
         HTML(
             .lang(context.site.language),
             .head(for: page, on: context.site),
+            .head(.script("var _paq=window._paq=window._paq||[];_paq.push(['trackPageView']),_paq.push(['enableLinkTracking']),function(){var a='https://navanspi.duckdns.org:6969/analytics/';_paq.push(['setTrackerUrl',a+'matomo.php']),_paq.push(['setSiteId','2']);var e=document,t=e.createElement('script'),p=e.getElementsByTagName('script')[0];t.type='text/javascript',t.async=!0,t.src=a+'matomo.js',p.parentNode.insertBefore(t,p)}();")),
             .head(
                 .script( .src("https://www.googletagmanager.com/gtag/js?id=UA-108635191-1v")
                 ),
@@ -183,6 +196,7 @@ private struct AlphaHTMLFactory<Site: Website>: HTMLFactory {
         HTML(
             .lang(context.site.language),
             .head(for: page, on: context.site),
+            .head(.script("var _paq=window._paq=window._paq||[];_paq.push(['trackPageView']),_paq.push(['enableLinkTracking']),function(){var a='https://navanspi.duckdns.org:6969/analytics/';_paq.push(['setTrackerUrl',a+'matomo.php']),_paq.push(['setSiteId','2']);var e=document,t=e.createElement('script'),p=e.getElementsByTagName('script')[0];t.type='text/javascript',t.async=!0,t.src=a+'matomo.js',p.parentNode.insertBefore(t,p)}();")),
             .head(
                 .script( .src("https://www.googletagmanager.com/gtag/js?id=UA-108635191-1v")
                 ),
@@ -266,7 +280,7 @@ private extension Node where Context == HTML.BodyContext {
                         .text(item.title)
                     )),
                     .tagList(for: item, on: site),
-                    .unwrap(item.readTime().time, { .span( "🕑 \($0) minute read.") }),
+                    .unwrap(item.readTime().time, { .span( "🕑 \($0) minute read. \(getFormattedDate(date: item.date))") }),
                     .p(.text(item.description))
                 ))
             }
@@ -298,4 +312,9 @@ private extension Node where Context == HTML.BodyContext {
         )
     }
 }
+    func getFormattedDate(date: Date) -> String {
+        let dateformat = DateFormatter()
+        dateformat.dateFormat = "MMMM d, yyyy"
+        return dateformat.string(from: date)
+    }
 

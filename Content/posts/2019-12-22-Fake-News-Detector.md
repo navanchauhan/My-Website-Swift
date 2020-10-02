@@ -1,7 +1,7 @@
 ---
 date: 2019-12-22 11:10
 description: In this tutorial we will build a fake news detecting app from scratch, using Turicreate for the machine learning model and SwiftUI for building the app
-tags: tutorial, colab, swiftUI, turicreate
+tags: Tutorial, Colab, SwiftUI, Turicreate
 ---
 
 
@@ -16,13 +16,13 @@ Note: These commands are written as if you are running a jupyter notebook.
 
 ### Data Gathering
 
-To build a classifier, you need a lot of data. George McIntire (GH: @joolsa) has created a wonderful dataset containing the headline, body and wheter it is fake or real.
+To build a classifier, you need a lot of data. George McIntire (GH: @joolsa) has created a wonderful dataset containing the headline, body and whether it is fake or real.
 Whenever you are looking for a dataset, always try searching on Kaggle and GitHub before you start building your own
 
 ### Dependencies
 
-I used a Google Colab instance for training my model.  If you also plan on using Google Colab then I reccomend choosing a GPU Instance (It is Free)
-This allows you to train the model on the GPU. Turicreat is built on top of Apache's MXNet Framework, for us to use GPU we need to install
+I used a Google Colab instance for training my model.  If you also plan on using Google Colab then I recommend choosing a GPU Instance (It is Free)
+This allows you to train the model on the GPU. Turicreate is built on top of Apache's MXNet Framework, for us to use GPU we need to install
 a CUDA compatible MXNet package.
 
 ```Termcap
@@ -123,7 +123,7 @@ coreml_model_name = model_name + '.mlmodel'
 exportedModel = model.export_coreml(coreml_model_name)
 ```
 
-**Note: To download files from Google Volab, simply click on the files section in the sidebar, right click on filename and then click on downlaod**
+**Note: To download files from Google Colab, simply click on the files section in the sidebar, right click on filename and then click on download**
 
 [Link to Colab Notebook](https://colab.research.google.com/drive/1onMXGkhA__X2aOFdsoVL-6HQBsWQhOP4)
 
@@ -136,7 +136,7 @@ First we create a single view app (make sure you check the use SwiftUI button)
 Then we copy our .mlmodel file to our project (Just drag and drop the file in the XCode Files Sidebar)
 
 Our ML Model does not take a string directly as an input, rather it takes bag of words as an input.
-DescriptionThe bag-of-words model is a simplifying representation used in NLP, in this text is represented as a bag of words, without any regatd of grammar or order, but noting multiplicity
+DescriptionThe bag-of-words model is a simplifying representation used in NLP, in this text is represented as a bag of words, without any regard for grammar or order, but noting multiplicity
 
 We define our bag of words function
 

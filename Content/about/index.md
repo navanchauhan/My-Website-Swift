@@ -14,8 +14,10 @@ Hi! My name is Navan Chauhan.
 
 ### What do I like?
 
-* In my free time I like restoring and colourising (YES, I follow British English) photographs. [My Behance Profile](https://www.behance.net/gallery/73508827/Restorations-and-Colourisation)
+* In my free time I like restoring and colourising photographs. [My Behance Profile](https://www.behance.net/gallery/73508827/Restorations-and-Colourisation)
 
 * I also like automating the mundane stuff using Python, and I have started dabbling in Swift.
 
-* I love creating weird machine learning models using Tensorflow ( I personally preffer Turicreate tbh )
+* I love creating weird machine learning models using Tensorflow ( I personally preffer Turicreate  )
+
+* I have also recently picked up a few tricks related to in-silo drug screening.

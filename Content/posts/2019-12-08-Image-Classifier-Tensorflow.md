@@ -1,7 +1,7 @@
 ---
 date: 2019-12-08 14:16
 description: Tutorial on creating an image classifier model using TensorFlow which detects malaria
-tags: tutorial, tensorflow, colab
+tags: Tutorial, Tensorflow, Colab
 ---
 
 # Creating a Custom Image Classifier using Tensorflow 2.x and Keras for Detecting Malaria
@@ -23,6 +23,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from keras.models import Sequential
 from keras.layers import Conv2D,MaxPooling2D,Dense,Flatten,Dropout
+
 ```
 
 ## Dataset
@@ -107,7 +108,7 @@ model.summary()
 
 ### Compiling Model
 
-We use the adam optimiser as it is an adaptive learning rate optimization algorithm that's been designed specifically for *training* deep neural networks, which means it changes its learning rate automaticaly to get the best results
+We use the Adam optimiser as it is an adaptive learning rate optimisation algorithm that's been designed specifically for *training* deep neural networks, which means it changes its learning rate automatically to get the best results
 
 ```python
 model.compile(optimizer="adam",

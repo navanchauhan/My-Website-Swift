@@ -1,7 +1,7 @@
 ---
 date: 2020-01-15 23:36
 description: Tutorial on setting up kaggle, to use with Google Colab
-tags: tutorial, colab, turicreate, kaggle
+tags: Tutorial, Colab, Turicreate, Kaggle
 ---
 
 # Setting up Kaggle to use with Google Colab
@@ -19,7 +19,7 @@ tags: tutorial, colab, turicreate, kaggle
 
 !["Account"](/assets/posts/kaggle-colab/ss2.png)
 
-### Scroll Down untill you see Create New API Token
+### Scroll Down until you see Create New API Token
 
 ![](/assets/posts/kaggle-colab/ss3.png)
 
@@ -48,4 +48,4 @@ After this click on the URL in the output section, login and then paste the Auth
 os.environ['KAGGLE_CONFIG_DIR'] = "/content/drive/My Drive/"
 ```
 
-Voila! You can now download kaggel datasets
+Voila! You can now download Kaggle datasets

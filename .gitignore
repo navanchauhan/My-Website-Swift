@@ -3,5 +3,5 @@
 /.build
 /.swiftpm
 /*.xcodeproj
-Output
+Output/
 .publish

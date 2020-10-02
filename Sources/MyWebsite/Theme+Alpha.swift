@@ -51,14 +51,6 @@ private struct AlphaHTMLFactory<Site: Website>: HTMLFactory {
                 ),
                 .script(.src("assets/manup.min.js")),
                 .script(.src("/pwabuilder-sw-register.js")),
-                
-                .script( .src("https://www.googletagmanager.com/gtag/js?id=UA-108635191-1v")
-                               ),
-                               .script("window.dataLayer = window.dataLayer || [];",
-                                 "function gtag(){dataLayer.push(arguments);}",
-                                 "gtag('js', new Date());",
-                                 "gtag('config', 'UA-108635191-1');"
-                           ),
                 .footer(for: context.site)
             )
         )
@@ -70,14 +62,6 @@ private struct AlphaHTMLFactory<Site: Website>: HTMLFactory {
             .lang(context.site.language),
             .head(for: section, on: context.site),
             .head(.script("var _paq=window._paq=window._paq||[];_paq.push(['trackPageView']),_paq.push(['enableLinkTracking']),function(){var a='https://navanspi.duckdns.org:6969/analytics/';_paq.push(['setTrackerUrl',a+'matomo.php']),_paq.push(['setSiteId','2']);var e=document,t=e.createElement('script'),p=e.getElementsByTagName('script')[0];t.type='text/javascript',t.async=!0,t.src=a+'matomo.js',p.parentNode.insertBefore(t,p)}();")),
-            .head(
-                .script( .src("https://www.googletagmanager.com/gtag/js?id=UA-108635191-1v")
-                ),
-                .script("window.dataLayer = window.dataLayer || [];",
-                  "function gtag(){dataLayer.push(arguments);}",
-                  "gtag('js', new Date());",
-                  "gtag('config', 'UA-108635191-1');"
-            )),
             .body(
                 .header(for: context, selectedSection: section.id),
                 .wrapper(
@@ -97,14 +81,6 @@ private struct AlphaHTMLFactory<Site: Website>: HTMLFactory {
             .lang(context.site.language),
             .head(for: item, on: context.site),
             .head(.script("var _paq=window._paq=window._paq||[];_paq.push(['trackPageView']),_paq.push(['enableLinkTracking']),function(){var a='https://navanspi.duckdns.org:6969/analytics/';_paq.push(['setTrackerUrl',a+'matomo.php']),_paq.push(['setSiteId','2']);var e=document,t=e.createElement('script'),p=e.getElementsByTagName('script')[0];t.type='text/javascript',t.async=!0,t.src=a+'matomo.js',p.parentNode.insertBefore(t,p)}();")),
-            .head(
-                .script( .src("https://www.googletagmanager.com/gtag/js?id=UA-108635191-1v")
-                ),
-                .script("window.dataLayer = window.dataLayer || [];",
-                  "function gtag(){dataLayer.push(arguments);}",
-                  "gtag('js', new Date());",
-                  "gtag('config', 'UA-108635191-1');"
-            )),
             .body(
                 .class("item-page"),
                 .header(for: context, selectedSection: item.sectionID),
@@ -137,14 +113,6 @@ private struct AlphaHTMLFactory<Site: Website>: HTMLFactory {
             .lang(context.site.language),
             .head(for: page, on: context.site),
             .head(.script("var _paq=window._paq=window._paq||[];_paq.push(['trackPageView']),_paq.push(['enableLinkTracking']),function(){var a='https://navanspi.duckdns.org:6969/analytics/';_paq.push(['setTrackerUrl',a+'matomo.php']),_paq.push(['setSiteId','2']);var e=document,t=e.createElement('script'),p=e.getElementsByTagName('script')[0];t.type='text/javascript',t.async=!0,t.src=a+'matomo.js',p.parentNode.insertBefore(t,p)}();")),
-            .head(
-                .script( .src("https://www.googletagmanager.com/gtag/js?id=UA-108635191-1v")
-                ),
-                .script("window.dataLayer = window.dataLayer || [];",
-                  "function gtag(){dataLayer.push(arguments);}",
-                  "gtag('js', new Date());",
-                  "gtag('config', 'UA-108635191-1');"
-            )),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
@@ -161,14 +129,6 @@ private struct AlphaHTMLFactory<Site: Website>: HTMLFactory {
             .lang(context.site.language),
             .head(for: page, on: context.site),
             .head(.script("var _paq=window._paq=window._paq||[];_paq.push(['trackPageView']),_paq.push(['enableLinkTracking']),function(){var a='https://navanspi.duckdns.org:6969/analytics/';_paq.push(['setTrackerUrl',a+'matomo.php']),_paq.push(['setSiteId','2']);var e=document,t=e.createElement('script'),p=e.getElementsByTagName('script')[0];t.type='text/javascript',t.async=!0,t.src=a+'matomo.js',p.parentNode.insertBefore(t,p)}();")),
-            .head(
-                .script( .src("https://www.googletagmanager.com/gtag/js?id=UA-108635191-1v")
-                ),
-                .script("window.dataLayer = window.dataLayer || [];",
-                  "function gtag(){dataLayer.push(arguments);}",
-                  "gtag('js', new Date());",
-                  "gtag('config', 'UA-108635191-1');"
-            )),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(
@@ -197,14 +157,6 @@ private struct AlphaHTMLFactory<Site: Website>: HTMLFactory {
             .lang(context.site.language),
             .head(for: page, on: context.site),
             .head(.script("var _paq=window._paq=window._paq||[];_paq.push(['trackPageView']),_paq.push(['enableLinkTracking']),function(){var a='https://navanspi.duckdns.org:6969/analytics/';_paq.push(['setTrackerUrl',a+'matomo.php']),_paq.push(['setSiteId','2']);var e=document,t=e.createElement('script'),p=e.getElementsByTagName('script')[0];t.type='text/javascript',t.async=!0,t.src=a+'matomo.js',p.parentNode.insertBefore(t,p)}();")),
-            .head(
-                .script( .src("https://www.googletagmanager.com/gtag/js?id=UA-108635191-1v")
-                ),
-                .script("window.dataLayer = window.dataLayer || [];",
-                  "function gtag(){dataLayer.push(arguments);}",
-                  "gtag('js', new Date());",
-                  "gtag('config', 'UA-108635191-1');"
-            )),
             .body(
                 .header(for: context, selectedSection: nil),
                 .wrapper(

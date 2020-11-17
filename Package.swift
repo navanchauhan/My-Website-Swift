@@ -8,8 +8,8 @@ let package = Package(
         .executable(name: "MyWebsite", targets: ["MyWebsite"])
     ],
     dependencies: [
-        .package(url: "https://github.com/johnsundell/publish.git", from: "0.4.0"),
-        .package(url: "https://github.com/artrmz/ReadTimePublishPlugin", from: "0.1.0"),
+        .package(url: "https://github.com/johnsundell/publish.git", from: "0.7.0"),
+        .package(url: "https://github.com/artrmz/ReadTimePublishPlugin", from: "0.1.1"),
         .package(url: "https://github.com/navanchauhan/SwiftPygmentsPublishPlugin", .branch("master")),
     ],
     targets: [
